@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>My collection</title>
+
+    <style>
+        .zoom {
+            padding: 18px;
+            transition: transform .2s;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            z-index:10;
+            background-color:#121212;
+        }
+        body {
+            background-color: #121212;
+        }
+        .zoom:hover {
+            -ms-transform: scale(1.2); /* IE 9 */
+            -webkit-transform: scale(1.2); /* Safari 3-8 */
+            transform: scale(1.2); 
+        }
+
+        .img__wrap {
+            position: relative;
+            height: 200px;
+            width: 200px;
+        }
+
+        .release_title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            font-size: 15px;
+            text-align: center;
+            color: yellow;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            visibility: hidden;
+            /* transition effect. not necessary */
+            transition: opacity .2s, visibility .2s;
+        }
+
+        .artist_name {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 15px;
+            color: red;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            visibility: hidden;
+            /* transition effect. not necessary */
+            transition: opacity .2s, visibility .2s;
+        }
+
+        .img__wrap:hover .artist_name {
+            visibility: visible;
+        }
+
+        .img__wrap:hover .release_title {
+            visibility: visible;
+        }
+
+        p {
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
